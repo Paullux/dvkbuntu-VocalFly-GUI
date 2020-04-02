@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>408</width>
+    <height>382</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VocalFly</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/icon/icon/vocalflyicon.png</normaloff>:/icon/icon/vocalflyicon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>290</y>
+      <width>120</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Appliquer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>145</x>
+      <y>290</y>
+      <width>120</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Annuler</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>391</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Choix du service de vocalisation :</string>
+    </property>
+    <widget class="QRadioButton" name="Google">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>281</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Cette voix est issue de Google,
+la voix est plutôt jolie mais
+elle nécessite internet pour fonctionner.</string>
+     </property>
+     <property name="text">
+      <string>Google_Speech (nécessite internet)</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="EspeakNG">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>381</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Cette voix est 100% libre,
+elle est aussi entière locale
+(elle ne nécessite pas internet)
+mais en revanche elle est très robotique !</string>
+     </property>
+     <property name="text">
+      <string>Espeak-ng (ne nécessite pas internet, voix moche)</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>391</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Activation du service de vocalisation :</string>
+    </property>
+    <widget class="QCheckBox" name="checkBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>181</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Activation/Désactivation de VocalFly</string>
+     </property>
+     <property name="text">
+      <string>Activation de VocalFly</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>120</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Quitter</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>26</x>
+      <y>1</y>
+      <width>361</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="image.qrc">:/icon/icon/VocalFly barre V3.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>408</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menuVocalFly">
+    <property name="title">
+     <string>VocalFly</string>
+    </property>
+    <addaction name="actionFermer"/>
+   </widget>
+   <widget class="QMenu" name="menu_propos">
+    <property name="title">
+     <string>À propos...</string>
+    </property>
+    <addaction name="action_propos_de_VocalFly"/>
+    <addaction name="action_propos_de_DVKbuntu"/>
+    <addaction name="action_propos_d_HandyOpenSource"/>
+   </widget>
+   <addaction name="menuVocalFly"/>
+   <addaction name="menu_propos"/>
+  </widget>
+  <action name="actionFermer">
+   <property name="text">
+    <string>Fermer</string>
+   </property>
+  </action>
+  <action name="actionR_initialiser">
+   <property name="text">
+    <string>Réinitialiser</string>
+   </property>
+  </action>
+  <action name="action_propos_de_VocalFly">
+   <property name="text">
+    <string>À propos de VocalFly</string>
+   </property>
+  </action>
+  <action name="action_propos_de_DVKbuntu">
+   <property name="text">
+    <string>À propos de DVKbuntu</string>
+   </property>
+  </action>
+  <action name="action_propos_d_HandyOpenSource">
+   <property name="text">
+    <string>À propos d'HandyOpenSource</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

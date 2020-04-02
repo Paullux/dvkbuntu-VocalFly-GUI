@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon/vocalflyicon.png</file>
+        <file>icon/handyopensourceicon.png</file>
+        <file>icon/dvkbuntuicon.png</file>
+        <file>icon/dialog-error.svg</file>
+        <file>icon/erroricon.png</file>
+        <file>icon/VocalFly barre V3.png</file>
+    </qresource>
+</RCC>
