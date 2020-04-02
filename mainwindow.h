@@ -7,6 +7,11 @@
 #include "dialog3.h"
 #include "erreurauthentification.h"
 #include <QProcess>
+#include <QMouseEvent>
+#include <QMediaPlayer>
+#include <QAction>
+#include <QThread>
+
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +27,7 @@ public:
     Dialog2 *objmain2;
     Dialog3 *objmain3;
     Erreurauthentification *objmain4;
+    QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
     ~MainWindow();
 
 private slots:
@@ -45,12 +51,16 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    virtual bool eventFilter(QObject* watched, QEvent* event);
 private:
     Ui::MainWindow *ui;
-    bool Google;
-    bool EspeakNG;
-    bool VocalFlyActivate;
+    bool Google = true;
+    bool EspeakNG = false;
+    bool VocalFlyActivate = true;
     QProcess *m_process = new QProcess;
+    QProcess *m_process2 = new QProcess;
+    QMediaPlayer *player = new QMediaPlayer;
+    bool play = false;
 };
 
 #endif // MAINWINDOW_H

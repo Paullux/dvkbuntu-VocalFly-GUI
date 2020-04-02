@@ -97,7 +97,7 @@ elle nécessite internet pour fonctionner.</string>
      </property>
      <property name="toolTip">
       <string>Cette voix est 100% libre,
-elle est aussi entière locale
+elle est aussi entièrement locale
 (elle ne nécessite pas internet)
 mais en revanche elle est très robotique !</string>
      </property>
