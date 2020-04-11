@@ -1,19 +1,17 @@
 #include "erreurauthentification.h"
 #include "ui_erreurauthentification.h"
+#include <QThread>
+#include <QDialog>
 
 Erreurauthentification::Erreurauthentification(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Erreurauthentification)
 {
     ui->setupUi(this);
-    player->setVolume(50);
     m_process2->start("createWaveFromItem \"Echec de lauthentification les paramètres choisis ne seront pas pris en compte.\"");
     m_process2->waitForFinished(-1);
-    player->setMedia(QUrl::fromLocalFile(env.value("HOME") + "/.local/share/dvkbuntu/sonEnCours.wav"));
-    if (!play) {
-        player->play();
-        play=true;
-    }
+    m_process2->start("aplay " + env.value("HOME") + "/.local/share/dvkbuntu/sonEnCours.wav");
+    play=true;
 }
 
 Erreurauthentification::~Erreurauthentification()

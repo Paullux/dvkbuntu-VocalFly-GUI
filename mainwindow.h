@@ -45,6 +45,8 @@ private slots:
 
     void on_EspeakNG_toggled(bool checked);
 
+    void on_pico2wave_toggled(bool checked);
+
     void on_checkBox_toggled(bool checked);
 
     void on_pushButton_clicked();
@@ -52,10 +54,18 @@ private slots:
     void on_pushButton_3_clicked();
 
     virtual bool eventFilter(QObject* watched, QEvent* event);
+
+    void on_TestGoogle_clicked();
+
+    void on_TestSpeak_clicked();
+
+    void on_TestPico_clicked();
+
 private:
     Ui::MainWindow *ui;
     bool Google = true;
     bool EspeakNG = false;
+    bool pico2wave = false;
     bool VocalFlyActivate = true;
     QProcess *m_process = new QProcess;
     QProcess *m_process2 = new QProcess;

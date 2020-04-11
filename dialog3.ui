@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>486</width>
-    <height>277</height>
+    <width>750</width>
+    <height>500</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>750</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>750</width>
+    <height>500</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>À propos d'HandyOpenSource</string>
@@ -23,31 +35,32 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>0</y>
-     <width>451</width>
-     <height>231</height>
+     <x>180</x>
+     <y>30</y>
+     <width>551</width>
+     <height>181</height>
     </rect>
    </property>
    <property name="text">
-    <string>                         HandyOpenSource est une association loi 1901,
-                         à but non lucratif qui a été mise en place afin
-                         de supporter le développement du projet de la
-                         distribution DVKBuntu.
-
-Nous vivons une époque où l'informatique fait partie intégrante
-de notre vie personnelle et professionnelle.
-Aujourd'hui, force est de constater que tous ne sont pas égaux
-dans l'utilisation de l’outil informatique.</string>
+    <string>HandyOpenSource est une association loi 1901, à but non lucratif qui a été mise en place afin de supporter le développement du projet de la distribution DVKBuntu.</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>220</y>
-     <width>99</width>
-     <height>38</height>
+     <x>570</x>
+     <y>410</y>
+     <width>151</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="text">
@@ -57,10 +70,10 @@ dans l'utilisation de l’outil informatique.</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>30</y>
-     <width>67</width>
-     <height>71</height>
+     <width>131</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="text">
@@ -70,6 +83,40 @@ dans l'utilisation de l’outil informatique.</string>
     <pixmap resource="image.qrc">:/icon/icon/handyopensourceicon.png</pixmap>
    </property>
    <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>220</y>
+     <width>711</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Nous vivons une époque où l'informatique fait partie intégrante de notre vie personnelle et professionnelle. Aujourd'hui, force est de constater que tous ne sont pas égaux dans l'utilisation de l’outil informatique.</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
     <bool>true</bool>
    </property>
   </widget>

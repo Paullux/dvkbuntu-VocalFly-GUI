@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>600</width>
+    <height>500</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
@@ -20,10 +32,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>100</y>
-     <width>301</width>
-     <height>101</height>
+     <x>10</x>
+     <y>140</y>
+     <width>581</width>
+     <height>241</height>
     </rect>
    </property>
    <property name="font">
@@ -31,19 +43,28 @@
      <pointsize>16</pointsize>
     </font>
    </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Échec de l'authentification !
 Les paramètres choisis
 ne seront pas pris en compte</string>
    </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>220</y>
-     <width>99</width>
-     <height>38</height>
+     <x>210</x>
+     <y>390</y>
+     <width>181</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -53,10 +74,10 @@ ne seront pas pris en compte</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>20</y>
-     <width>67</width>
-     <height>71</height>
+     <x>230</x>
+     <y>10</y>
+     <width>141</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="text">

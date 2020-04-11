@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>244</height>
+    <width>600</width>
+    <height>500</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>À propos de VocalFly</string>
@@ -23,29 +35,32 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>140</x>
      <y>30</y>
-     <width>351</width>
-     <height>141</height>
+     <width>431</width>
+     <height>151</height>
     </rect>
    </property>
    <property name="text">
-    <string>                       VocalFly est un service de
-                       vocalisation de l'interface de
-                       la Distribution DVKBuntu.
-
-Le but de ce service est de permettre notamment
-aux personnes malvoyantes de pouvoir accéder
-à l'informatique.</string>
+    <string>VocalFly est un service de vocalisation de l'interface de la Distribution DVKBuntu.</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>180</y>
-     <width>99</width>
-     <height>38</height>
+     <x>400</x>
+     <y>410</y>
+     <width>171</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -57,8 +72,8 @@ aux personnes malvoyantes de pouvoir accéder
     <rect>
      <x>20</x>
      <y>30</y>
-     <width>67</width>
-     <height>61</height>
+     <width>111</width>
+     <height>111</height>
     </rect>
    </property>
    <property name="text">
@@ -68,6 +83,28 @@ aux personnes malvoyantes de pouvoir accéder
     <pixmap resource="image.qrc">:/icon/icon/vocalflyicon.png</pixmap>
    </property>
    <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>210</y>
+     <width>551</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Le but de ce service est de permettre notamment aux personnes malvoyantes de pouvoir accéder à l'informatique.</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
     <bool>true</bool>
    </property>
   </widget>

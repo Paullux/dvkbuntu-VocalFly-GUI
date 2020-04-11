@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>408</width>
-    <height>382</height>
+    <width>950</width>
+    <height>720</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>950</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>950</width>
+    <height>720</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>VocalFly</string>
@@ -16,6 +28,9 @@
   <property name="windowIcon">
    <iconset resource="image.qrc">
     <normaloff>:/icon/icon/vocalflyicon.png</normaloff>:/icon/icon/vocalflyicon.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -27,10 +42,10 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>290</y>
-      <width>120</width>
-      <height>38</height>
+      <x>543</x>
+      <y>611</y>
+      <width>246</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
@@ -40,10 +55,10 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>145</x>
-      <y>290</y>
-      <width>120</width>
-      <height>38</height>
+      <x>277</x>
+      <y>611</y>
+      <width>246</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
@@ -54,10 +69,19 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>100</y>
-      <width>391</width>
-      <height>101</height>
+      <y>200</y>
+      <width>930</width>
+      <height>250</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
     </property>
     <property name="title">
      <string>Choix du service de vocalisation :</string>
@@ -69,18 +93,27 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>40</y>
-       <width>281</width>
-       <height>26</height>
+       <y>50</y>
+       <width>761</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
      <property name="toolTip">
       <string>Cette voix est issue de Google,
 la voix est plutôt jolie mais
 elle nécessite internet pour fonctionner.</string>
      </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
      <property name="text">
-      <string>Google_Speech (nécessite internet)</string>
+      <string>Google_Speech (nécessite internet, la meilleure)</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -90,10 +123,16 @@ elle nécessite internet pour fonctionner.</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>70</y>
-       <width>381</width>
-       <height>21</height>
+       <y>110</y>
+       <width>761</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
      <property name="toolTip">
       <string>Cette voix est 100% libre,
@@ -101,8 +140,81 @@ elle est aussi entièrement locale
 (elle ne nécessite pas internet)
 mais en revanche elle est très robotique !</string>
      </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
      <property name="text">
       <string>Espeak-ng (ne nécessite pas internet, voix moche)</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="pico2wave">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>761</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Cette voix est 100% libre,
+elle est aussi entièrement locale
+(elle ne nécessite pas internet)
+et elle est mieux que Espeak-NG !</string>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>pico2wave (ne nécessite pas internet, voix mieux)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="TestGoogle">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>50</y>
+       <width>141</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Test voix
+Google</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="TestSpeak">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>110</y>
+       <width>141</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Test voix
+Espeak</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="TestPico">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>170</y>
+       <width>140</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Test voix
+Pico</string>
      </property>
     </widget>
    </widget>
@@ -110,9 +222,9 @@ mais en revanche elle est très robotique !</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>210</y>
-      <width>391</width>
-      <height>71</height>
+      <y>460</y>
+      <width>930</width>
+      <height>131</height>
      </rect>
     </property>
     <property name="title">
@@ -123,12 +235,21 @@ mais en revanche elle est très robotique !</string>
       <rect>
        <x>10</x>
        <y>40</y>
-       <width>181</width>
-       <height>26</height>
+       <width>761</width>
+       <height>81</height>
       </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
      <property name="toolTip">
       <string>Activation/Désactivation de VocalFly</string>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
      </property>
      <property name="text">
       <string>Activation de VocalFly</string>
@@ -142,9 +263,9 @@ mais en revanche elle est très robotique !</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>290</y>
-      <width>120</width>
-      <height>38</height>
+      <y>611</y>
+      <width>246</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
@@ -154,10 +275,10 @@ mais en revanche elle est très robotique !</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>26</x>
-      <y>1</y>
-      <width>361</width>
-      <height>91</height>
+      <x>10</x>
+      <y>0</y>
+      <width>791</width>
+      <height>191</height>
      </rect>
     </property>
     <property name="text">
@@ -176,8 +297,8 @@ mais en revanche elle est très robotique !</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>408</width>
-     <height>34</height>
+     <width>950</width>
+     <height>29</height>
     </rect>
    </property>
    <property name="defaultUp">
