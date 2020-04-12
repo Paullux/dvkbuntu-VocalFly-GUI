@@ -27,7 +27,10 @@ public:
     Dialog2 *objmain2;
     Dialog3 *objmain3;
     Erreurauthentification *objmain4;
+    bool otherWindow = false;
+    bool init = true;
     QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+    Ui::MainWindow *ui;
     ~MainWindow();
 
 private slots:
@@ -62,7 +65,7 @@ private slots:
     void on_TestPico_clicked();
 
 private:
-    Ui::MainWindow *ui;
+
     bool Google = true;
     bool EspeakNG = false;
     bool pico2wave = false;
