@@ -69,7 +69,6 @@ MainWindow::MainWindow(QWidget *parent) :
         cout << "Erreur : Impossible d'ouvrir le fichier." << endl;
     }
     monFlux.close();
-    init=false;
     ui->centralWidget->installEventFilter(this);
     ui->Google->installEventFilter(this);
     ui->EspeakNG->installEventFilter(this);
@@ -102,7 +101,10 @@ MainWindow::~MainWindow()
 
 bool MainWindow::eventFilter(QObject* watched, QEvent* event)
 {
-    if (!otherWindow) {
+    if (player->state() != QMediaPlayer::PlayingState) {
+            init=false;
+    }
+    if (!otherWindow && !init) {
         if (event->type() != QEvent::WindowDeactivate) {
             if (watched == ui->TestGoogle && event->type() == QEvent::HoverEnter) {
                 play=false;
