@@ -91,7 +91,6 @@ MainWindow::MainWindow(QWidget *parent) :
         player->play();
         play=true;
     }
-    /*player->stop();*/
 }
 
 MainWindow::~MainWindow()
@@ -150,15 +149,13 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event)
             } else if (watched == ui->action_propos_d_HandyOpenSource && event->type() == QEvent::HoverEnter) {
                 play=false;
                 m_process2->start("createWaveFromItem \"À propos de Handy OpenSource.\"");
-            /*} else if (watched == ui->centralWidget && event->QEvent::HoverEnter) {
-                m_process2->start("createWaveFromItem \"Interface de Gestion de VocalFLy\"");*/
             } else if ((watched == ui->TestGoogle || watched == ui->TestSpeak || watched == ui->TestPico || watched == ui->Google || watched == ui->EspeakNG || watched == ui->checkBox || watched == ui->pushButton || watched == ui->pushButton_2 || watched == ui->pushButton_3 || watched == ui->action_propos_de_VocalFly || watched == ui->action_propos_de_DVKbuntu || watched == ui->action_propos_d_HandyOpenSource || watched == ui->centralWidget) && event->type() == QEvent::HoverLeave) {
                 play=false;
                 player->stop();
                 m_process2->start("createWaveFromItem \"Stop !\"");
             }
             m_process2->waitForFinished(-1);
-            if (!play) {
+            if (player->state() != QMediaPlayer::PlayingState) {
                 player->setVolume(50);
                 player->setMedia(QUrl::fromLocalFile(env.value("HOME") + "/.local/share/dvkbuntu/sonEnCours.wav"));
                 player->play();
@@ -321,12 +318,9 @@ void MainWindow::on_pushButton_clicked()
 
 
     if (m_process->exitCode()==126 || m_process->exitCode()==127) {
-        //m_process2->start("createWaveFromItem \"\"");
-        //m_process2->waitForFinished(-1);
-        //MainWindow::destroy();
         objmain4=new Erreurauthentification;
         objmain4->show();
-        if (!objmain4->isVisible()) { otherWindow =false; }
+        if (!objmain4->isVisible()) { otherWindow = false; }
     } else {
         player->setVolume(50);
         player->setMedia(QUrl::fromLocalFile(env.value("HOME") + "/.local/share/dvkbuntu/sonEnCours.wav"));
